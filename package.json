@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.extend.js",
-  "version":        "0.8.0",
+  "version":        "0.8.1",
   "description":    "",
   "url":            "https://github.com/uupaa/Extend.js",
   "keywords":       ["Extend", "Mixin", "Polyfill", "Fallback", "util", "uupaa"],
