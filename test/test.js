@@ -1,11 +1,11 @@
 new Test().add([
         testExtend,
     ]).run().worker(function(err, test) {
-        if (!err) {
-            var undo = Test.swap(Extend, Extend_);
+        if (!err && typeof Extend_ !== "undefined") {
+            var name = Test.swap(Extend, Extend_);
 
             new Test(test).run(function(err, test) {
-                undo = Test.undo(undo);
+                Test.undo(name);
             });
         }
     });
