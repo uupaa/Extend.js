@@ -12,10 +12,10 @@ __report = {
       },
       "complexity": {
         "aggregate": {
-          "line": 5,
+          "line": 18,
           "complexity": {
             "sloc": {
-              "physical": 146,
+              "physical": 148,
               "logical": 67
             },
             "cyclomatic": 21,
@@ -52,11 +52,11 @@ __report = {
   ],
   "summary": {
     "total": {
-      "sloc": 146,
+      "sloc": 148,
       "maintainability": 62.70949688690379
     },
     "average": {
-      "sloc": 146,
+      "sloc": 148,
       "maintainability": "62.71"
     }
   }
