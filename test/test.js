@@ -1,22 +1,21 @@
-new Test().add([
+var ModuleTest = (function(global) {
+
+return new Test({
+        disable:    false,
+        node:       true,
+        browser:    true,
+        worker:     true,
+        button:     true,
+        both:       true,
+        primary:    global["Extend"],
+        secondary:  global["Extend_"],
+    }).add([
         testExtend,
         testExtend_override,
         testExtend_define,
         testExtend_define_override,
         testExtend_mixin,
-    ]).run(function(err, test) {
-        if (1) {
-            err || test.worker(function(err, test) {
-                if (!err && typeof Extend_ !== "undefined") {
-                    var name = Test.swap(Extend, Extend_);
-
-                    new Test(test).run(function(err, test) {
-                        Test.undo(name);
-                    });
-                }
-            });
-        }
-    });
+    ]).run().clone();
 
 function testExtend(next) {
     var NOP = function() {};
@@ -171,4 +170,6 @@ function testExtend_mixin(next) {
         next && next.miss();
     }
 }
+
+})((this || 0).self || global);
 
