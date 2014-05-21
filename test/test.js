@@ -28,7 +28,7 @@ function testExtend(next) {
             }
         };
 
-    Extend(baseObject, extendTreeObject);
+    Extend.tree(baseObject, extendTreeObject);
 
     if (baseObject.Object.keys   === Object.keys &&
         baseObject.Object.freeze === Object.freeze &&
@@ -55,7 +55,7 @@ function testExtend_override(next) {
             }
         };
 
-    Extend(baseObject, extendTreeObject);
+    Extend.tree(baseObject, extendTreeObject);
 
     var extendTreeObject2 = {
             Object: {
@@ -66,7 +66,7 @@ function testExtend_override(next) {
                 isArray: NOP2
             }
         };
-    Extend(baseObject, extendTreeObject2, true); // override
+    Extend.tree(baseObject, extendTreeObject2, true); // override
 
     if (baseObject.Object.keys   === NOP2 &&
         baseObject.Object.freeze === NOP2 &&
