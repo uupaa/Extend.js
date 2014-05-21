@@ -22,7 +22,7 @@ Mixin, Polyfill, Fallback functions.
 
 // ExtendTreeObject example:
 
-Extend(global, {
+Extend.tree(global, {
          "Array": {
              "name": "Array",
              "isArray": Array_isArray,
@@ -38,6 +38,10 @@ Extend(global, {
          }
      }
  });
+
+Extend.define(Object, "keys", Object.keys);
+
+Extend.mixin(Object, { "keys": Object.keys });
 
 </script>
 ```
