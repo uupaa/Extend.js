@@ -1,40 +1,35 @@
-=========
-Extend.js
-=========
+# Extend.js [![Build Status](https://travis-ci.org/uupaa/Extend.js.png)](http://travis-ci.org/uupaa/Extend.js)
 
-![](https://travis-ci.org/uupaa/Extend.js.png)
+[![npm](https://nodei.co/npm/uupaa.extend.js.png?downloads=true&stars=true)](https://nodei.co/npm/uupaa.extend.js/)
 
 Mixin, Polyfill, Fallback functions.
 
-# Document
+## Document
 
 - [Extend.js wiki](https://github.com/uupaa/Extend.js/wiki/Extend)
 - [Development](https://github.com/uupaa/WebModule/wiki/Development)
 - [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
 
 
-# How to use
+## How to use
+
+### Browser
 
 ```js
 <script src="lib/Extend.js">
 <script>
-// for Browser
-
-// ExtendTreeObject example:
-
 Extend.tree(global, {
-         "Array": {
-             "name": "Array",
-             "isArray": Array_isArray,
-             "prototype": {
-                 "forEach": Array_forEach
-             }
-         },
-         "String": {
-             "name": "String",
-             "prototype": {
-                 "trim": String_trim
-             }
+     "Array": {
+         "name": "Array",
+         "isArray": Array_isArray,
+         "prototype": {
+             "forEach": Array_forEach
+         }
+     },
+     "String": {
+         "name": "String",
+         "prototype": {
+             "trim": String_trim
          }
      }
  });
@@ -46,17 +41,15 @@ Extend.mixin(Object, { "keys": Object.keys });
 </script>
 ```
 
-```js
-// for WebWorkers
-importScripts("lib/Extend.js");
+### WebWorkers
 
-...
+```js
+importScripts("lib/Extend.js");
 ```
 
-```js
-// for Node.js
-var Extend = require("lib/Extend.js");
+### Node.js
 
-...
+```js
+var Extend = require("lib/Extend.js");
 ```
 
